@@ -1,12 +1,19 @@
+# ==========================
+#  	LIBRARIES USED
 import os
 import collections
 from pprint import pprint
 import sys
 import time
-import platform
+# ==========================
 
+
+# ============================
+# FUNCTION WHERE WORK IS DONE
+# ============================
 def organize():
 	SYS_ARG_PATH = os.path.normpath(sys.argv[1]) #input path for directory to organize
+	# If you want to hardcode a path you can change sys.argv[1] --> 'to your path'
 
 	# File type to folder
 	DIRECTORIES = collections.defaultdict()
@@ -34,24 +41,20 @@ def organize():
 	        # Rename the new dir
 	        os.rename(source, destination)
 
+# ============================
+# 	  MAIN
+# ============================
 if __name__ == '__main__':
-	#This will keep script running
-	#Every 20 seconds it will scan for new files and if new file is in the 
-	# directory, it will move it to its appropriate place
-	# print(platform.platform())
-	# os.system('clear')
-	# os.system('cls')
 	ask = input("Would you like to keep this program running in the background? Y/N --> ")
 	ask = ask.lower()
 	if ask == 'y':
-		# os.system('clear')
-		# os.system('cls')
+		#This will keep script running
+		#Every 20 seconds it will scan for new files and if new file is in the 
+		# directory, it will move it to its appropriate place
 		while True:
 			organize()
 			time.sleep(20)
 	if ask == 'n':
-		# os.system('clear')
-		# os.system('cls')
 		print('=================================================')
 		print('\t\tRUNNING ONCE')
 		print('=================================================')
@@ -59,32 +62,12 @@ if __name__ == '__main__':
 
 
 
+		# ========================================
 		# To Exit when running in the background
 		# press ctrl + c
+		# ========================================
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
