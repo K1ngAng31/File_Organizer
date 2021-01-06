@@ -10,16 +10,21 @@ Instead of having a defined dictionary with only certain folders created, I thou
 - I wanted there to be a folder for .py code, .js code, and so on.
 
 The way this script works is:
-username@user: python file_organizer.py 'Directory you want to organize'
+username@user: python file_organizer.py 'change'
+
+Change --> put in your diretory path. If I want to organize my Downloads directory, the path would be: /Users/username/Downloads
+- Script would look like: username@user: python file_organizer.py /Users/username/Downloads
+
+This script takes in the systems argument (change) to automatically locate the path and scan the directory and organize. No need to hardcode the path in the .py code. 
 
 After running, it will output: 
 Would you like to keep this program running in the background? Y/N -->
-
-The user then can choose y or n
 
 If the user chooses 'y', the script will run in the background and update the directory very 20 seconds. If a new file is detected, then the file will be moved to the appropriate folder if one doesn't exist. Since it is running in the background, their is no exit, you can just press CTRL+C to quit the script.
 
 If the user chooses 'n', the script will run once. It will scan the current directory and all its files/folders and move those files to the appropriate folder.
 
 ### Enjoy organizing your files!! 
+
+#### Feel free to change and use as you want.
 
